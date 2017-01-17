@@ -1,0 +1,15 @@
+api-gateway:
+  build: .
+  image: anthonysgueglia/micro-api-gateway
+  command: nodemon index.js
+  environment:
+    NODE_ENV: development
+    APP_PORT: 3000
+  links:
+    - rabbitmq
+  restart: always
+  ports:
+    - '3000:3000'
+  volumes:
+    - .:/usr/src/app
+    - /usr/src/app/node_modules
