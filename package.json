@@ -1,0 +1,22 @@
+{
+  "name": "micro-api-gateway",
+  "version": "1.0.0",
+  "description": "The API gateway for the \"Micro\" project.",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.0.1",
+    "express": "^4.14.0",
+    "micro-common": "git+https://github.com/ant2400/micro-common.git",
+    "lodash": "^4.16.4",
+    "seneca": "^3.2.1",
+    "seneca-amqp-transport": "^1.0.1"
+  },
+  "devDependencies": {
+    "mocha": "^3.1.0",
+    "nodemon": "^1.10.2",
+    "should": "^11.1.0"
+  }
+}
