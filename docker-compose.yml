@@ -1,6 +1,6 @@
 api-gateway:
   build: .
-  image: anthonysgueglia/micro-api-gateway
+  image: ant2400/micro-api-gateway
   command: nodemon index.js
   environment:
     NODE_ENV: development
