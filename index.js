@@ -7,7 +7,7 @@ const amqp = require('seneca-amqp-transport');
 const seneca =require('seneca')().use(amqp);
 const ready = require('micro-common/ready');
 
-const services = ['one', 'two'];
+const services = ['one'];
 
 /**
  * Regular old endpoint.
@@ -41,9 +41,10 @@ app.get('/greeting', (req, res) => {
         }, callback);
 
     }, (err, results) => {
+        console.log('WEVE MADE IT HERE');
 
         if (err) {
-            return res.send('an error occurred!');
+            return res.send('an error occurred!', err);
         }
 
         /**
